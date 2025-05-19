@@ -16,5 +16,5 @@ print(token3)
 print(token4)
 print(type(token1))
 print(type(token3))
-#print(int(token1,2))
+print(int(token1,2)) # doesnt work stick to hex
 print(int(token3,16))
