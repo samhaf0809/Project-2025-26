@@ -12,5 +12,3 @@ print(master_pass)
 hash_master_pass = hashlib.sha512(master_pass.encode()).digest()
 
 print(hash_master_pass)
-
-
