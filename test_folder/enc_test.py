@@ -6,9 +6,15 @@ from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 
 import hashlib
 
+def hasher_old():
+    master_pass = str(input("Enter the master pasword: "))
+    print(master_pass)
+    hash_master_pass = hashlib.sha512(master_pass.encode()).hexdigest()
+    return hash_master_pass
 
-master_pass = str(input("Enter the master pasword: "))
-print(master_pass)
-hash_master_pass = hashlib.sha512(master_pass.encode()).digest()
+def hasher(passw):
+    hash_master_pass = hashlib.sha512(passw.encode()).hexdigest()
+    return hash_master_pass
 
-print(hash_master_pass)
+if __name__ == "__main__":
+    print(hasher_old())
